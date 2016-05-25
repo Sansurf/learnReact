@@ -1,0 +1,14 @@
+{
+  "name": "learnReact",
+  "version": "1.0.0",
+  "description": "I'm studying React at the moment",
+  "main": "index.php",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Eliseev Alexandr",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "~4.13.4"
+  }
+}
