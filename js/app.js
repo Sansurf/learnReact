@@ -93,11 +93,35 @@ var News = React.createClass({
 	}
 });
 
+// --- Добавили Input ---
+var Input = React.createClass({
+
+	onBtnClickHandler: function() {
+		console.log(this.refs);
+		alert(ReactDOM.findDOMNode(this.refs.myTestInput).value);
+	},
+
+	render: function() {
+		return (
+			<form>
+				<input 
+					className="input_comment"
+					defaultValue=''
+					ref="myTestInput"
+					placeholder="Введите значение"
+				/>
+				<input type="submit" ref="alert_button" value="Show Input Text" onClick={this.onBtnClickHandler} />
+			</form>
+		);
+	}
+});
+
 var App = React.createClass({
 	render: function() {
 		return (
 			<div className="app">
 				<h3>Новости</h3>
+				<Input /> 	{/* Добавили вывод компонента */}
 				<News data = {my_news} /> {/*Добавили свойство data*/}
 			</div>
 		);
